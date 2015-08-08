@@ -1,0 +1,47 @@
+
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+@import "_pallete";
+@import "_homepage";
+@import "_icon";
+@import "_navbar";
+@import "_scaffolding";
+@import "_thumbnail";
+@import "_panel";
+@import "_progressbar";
+@import "_heading";
+@import "_form";
+@import "_animation";
+@import "_project";
+
+body,
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: "Open Sans", "Trebuchet MS", sans-serif;
+	background-color: #f1f1f1;
+}
+
+a {
+	color: $primary-color;
+
+	&:hover,
+	&:focus {
+		color: $primary-color-dark;
+	}
+}
+
+.content {
+	margin-top: 740px;
+}
+
+*::selection {
+	background: $primary-color-light;
+}
+
+*::-moz-selection {
+	background: $primary-color-light;
+}

@@ -1,0 +1,33 @@
+
+h2 Portfólio
+h1 SELEÇÃO DE TRABALHOS
+
+.container
+    
+    input.tag-all#tag-all(name="tagset", type="radio", checked="cheked")
+    label.tag-label-all.visible-lg-inline.visible-md-inline(for="tag-all")="Tudo"
+
+    input.tag-web#tag-web(name="tagset", type="radio")
+    label.tag-label-web.visible-lg-inline.visible-md-inline(for="tag-web")="Web"
+
+    input.tag-mobile#tag-mobile(name="tagset", type="radio")
+    label.tag-label-mobile.visible-lg-inline.visible-md-inline(for="tag-mobile")="Mobile"
+
+    input.tag-sistema#tag-sistema(name="tagset", type="radio")
+    label.tag-label-sistema.visible-lg-inline.visible-md-inline(for="tag-sistema")="Sistema"
+
+    ul.row.items
+        each project in projects
+            li(class="col-xs-12 col-md-4 item-tag-"+project.tag)
+                figure
+                    img(src="projeto/"+project.slug+"/thumb.jpg")
+                    figcaption
+                        a(href="projeto/"+project.slug)
+                            ="Veja Mais"
+                        div
+                            h1=project.name
+                            p Veja mais sobre o processo de desenvolvimento.
+br
+br
+
+h6 *Apenas novos projetos são selecionados e exibidos nesta página.

@@ -1,0 +1,11 @@
+
+.progress {
+    height: 4px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    .progress-bar {
+        background-color: $primary-color;
+    }
+}

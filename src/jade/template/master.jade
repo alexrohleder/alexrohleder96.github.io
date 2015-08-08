@@ -1,0 +1,70 @@
+doctype html
+html
+    head
+        //-base(href="/")
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible", content="ie=edge")
+
+        title Alex Rohleder - Portfólio
+
+        meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+        meta(name="author", content="Alex Rohleder")
+        meta(name="description", content="")
+
+        block hassets
+            link(type="text/css", rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+            link(type="text/css", rel="stylesheet", href="css/main.css")
+
+    body
+        .foreground
+                .logotype.animated.infinite.flash ALEXROHLEDER
+                .logotype.landscape.hidden VOCÊ DEVE USAR SEU APARELHO NA POSIÇÃO NORMAL
+
+        block content
+
+        .container-fluid
+            .row
+                section.col-xs-12#contact
+                    h2 contato
+                    h1 ENTRE EM CONTATO COMIGO
+                    .container
+                        .row
+                            .col-xs-12
+                                p.
+                                    Você pode me ligar pelo número #[a(href="tel:5581557066", title="Ligar")="558155-7066"] ou me contatar pelo e-mail #[a(href="mailto:alexrohleder96@outlook.com", title="Enviar um e-mail")="alexrohleder96@outlook.com"] ou se preferir preencher o formulário abaixo.
+                                p.
+                                    Caso tenha alguma dúvida sobre como tudo funciona, você pode ver rapidamente a #[a(href="/faq", title="Descubra como tudo funciona")="seção de perguntas frequentes"].
+                                form.contact-form(autocomplete="off")#contact-form
+                                    .inner
+                                        ol.questions
+                                            li
+                                                span: label(for="contact-name")="Qual seu nome?"
+                                                input(id="contact-name", name="contact-name", type="text")
+                                            li
+                                                span: label(for="contact-email")="E seu e-mail?"
+                                                input(id="contact-email", name="contact-email", type="email")
+                                            li
+                                                span: label(for="contact-message")="O que deseja?"
+                                                input(id="contact-message", name="contact-message", type="text")
+                                        .controls
+                                            button.next
+                                            .progress
+                                            span.number
+                                                span.number-current
+                                                span.number-total
+                                            span.error-message
+                                        button.submit
+                                    h1.final-message
+                                p.text-center!="&copy;2015 Alex Rohleder Todos os Direitos Reservados"
+
+        block fassets
+            script(type="text/javascript", src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js")
+            script(type="text/javascript", src="http://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.js")
+            script(type="text/javascript", src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js", async)
+            script(type="text/javascript", src="js/main.js")
+
+            link(type="text/css", rel="stylesheet", href="http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700|Satisfy")
+            link(type="text/css", rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+
+            script.
+                (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-XXXXX-X');ga('send','pageview');

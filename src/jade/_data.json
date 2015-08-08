@@ -1,0 +1,52 @@
+{
+    "skills": [
+        {"name": "HTML5/CSS3", "progress": "98", "title": "Estruturação focada no outline e SEO"},
+        {"name": "JAVASCRIPT", "progress": "88"},
+        {"name": "PHP", "progress": "99"},
+        {"name": "DATABASE", "progress": "94"},
+        {"name": "MOBILE/DESKTOP", "progress": "90"},
+        {"name": "SERVER", "progress": "85"}
+    ],
+    "resources": {
+        "jQuery": "https://jquery.com",
+        "AngularJS": "http://angularjs.org",
+        "Bootstrap": "http://getbootstrap.com",
+        "Grunt": "http://gruntjs.com",
+        "Bower": "http://bower.io",
+        "Laravel": "http://laravel.com",
+        "Slim Framework": "http://slimframework.com",
+        "SASS": "http://sass-lang.com",
+        "Jade": "http://jade-lang.com",
+        "MySQL": "http://mysql.com",
+        "Postgre": "http://postgresql.org",
+        "SQLite": "http://sqlite.org",
+        "GIT": "http://git-scm.com",
+        "SVN": "https://subversion.apache.org",
+        "Redmine": "http://redmine.org/",
+        "Rails": "http://rubyonrails.org",
+        "NodeJS": "https://nodejs.org",
+        "Node WebKit": "http://nwjs.io/",
+        "Cordova/Phonegap": "https://cordova.apache.org/",
+        "Ionic": "http://ionicframework.com/",
+        "WordPress": "http://br.wordpress.org/",
+        "Apache": "http://httpd.apache.org/",
+        "Vagrant": "https://www.vagrantup.com/"
+    },
+    "projects": [
+        {
+            "name": "Puma Detetives",
+            "slug": "pumadetetives",
+            "tag" : "web"
+        },
+        {
+            "name": "Bella Forma",
+            "slug": "bellaforma",
+            "tag" : "web"
+        },
+        {
+        	"name": "AGIL",
+        	"slug": "agil",
+        	"tag" : "sistema"
+        }
+    ]
+}
