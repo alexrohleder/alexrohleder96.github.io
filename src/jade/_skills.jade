@@ -1,0 +1,17 @@
+
+h2 Habilidades
+h1 EM QUE SOU BOM
+
+.container
+    .row
+        .col-xs-12.col-md-6
+            .skills
+                each skill in skills
+                    p=skill.progress+"% em "+skill.name
+                    .progress
+                        .progress-bar(style="width:"+skill.progress+"%;")
+        .col-xs-12.col-md-6.text-left
+            h3.featured Ferramentas que Utilizo
+            p Durante os anos em que trabalhei com estas tecnologias acabei por me adaptar com alguns de seus recursos e ferramentas, você pode acompanhar uma lista das principais utilizadas frequêntemente logo abaixo.
+            each link, resource in resources
+                a(href=link, title="Veja mais sobre "+resource, target="_blank")=resource

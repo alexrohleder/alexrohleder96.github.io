@@ -28,11 +28,11 @@ module.exports = function(grunt) {
                     }
                 },
                 files: [{
-                    cwd: "src/jade",
-                    src: ["**/index.jade"],
-                    dest: "dist",
+                    cwd: 'src/jade',
+                    src: ['**/*.jade', '!**/_*.jade'],
+                    dest: 'dist',
                     expand: true,
-                    ext: ".html"
+                    ext: '.html'
                 }]
             }
         },
@@ -43,17 +43,7 @@ module.exports = function(grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    "dist/index.html": "dist/index.html"
-                }
-            }
-        },
-        browserSync: {
-            bsFiles: {
-                src : 'dist/**/*.*'
-            },
-            options: {
-                server: {
-                    baseDir: "./dist"
+                    'dist/index.html': 'dist/index.html'
                 }
             }
         },
@@ -82,7 +72,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-browser-sync');
     
     grunt.registerTask('default', [
         'jade',
@@ -90,10 +79,6 @@ module.exports = function(grunt) {
         'uglify',
         'compass',
         'watch'
-    ]);
-
-    grunt.registerTask('bs', [
-        'browserSync'
     ]);
 
 };

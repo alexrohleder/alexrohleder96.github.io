@@ -1,23 +1,27 @@
-extends ./template/master
+extends ./template/_master
 
 block content
     
     #content
-        include ./index/header
+        include _header
+        
         .content
             main.container-fluid
                 .row
                     section.col-xs-12#about
-                        include ./index/about
+                        include _about
                 .row
                     section.col-xs-12#skills
-                        include ./index/skills
+                        include _skills
                 .row
                     section.col-xs-12#career
-                        include ./index/career
-                .row
+                        include _career
+                //.row
                     section.col-xs-12#services
-                        include ./index/services
-                .row
+                        include _services
+                //.row
                     section.col-xs-12#portfolio
-                        include ./index/portfolio
+                        include _portfolio
+                .row
+                    section.col-xs-12#contact
+                        include _contact

@@ -1,12 +1,15 @@
 
 $(function () {
     
-    var resizeMainHeader = function resizeMainHeader() {
-        $('#home').css('height', $(window).height());
-        $('.content').css('marginTop', $(window).height());
+    var resizeMainHeader = function () {
+        var height = $(window).height();
+            height = height < 500 ? 500 : height;
+
+        $('#home').css('height', height);
+        $('.content').css('marginTop', height);
     }
 
-    var windowOnLoad = function windowOnLoad() {
+    var windowOnLoad = function () {
         setTimeout(function () {
             $('.foreground').velocity('fadeOut', {'duration': 1000});
             $('.heading .animated').addClass('slideInUp');
@@ -14,7 +17,7 @@ $(function () {
         }, 1000);
     }
 
-    var localAnchorOnClick = function localAnchorOnClick(ev) {
+    var localAnchorOnClick = function (ev) {
         ev.preventDefault();
         $($(this).attr('href')).velocity('scroll');
     }
