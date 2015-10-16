@@ -1,0 +1,33 @@
+
+.navbar-theme {
+    padding: 20px 0 0 0;
+    position: absolute;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    width: 100%;
+    top: 0;
+
+    a, a:hover, a:active {
+        color: $primary-color-text;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+    }
+
+    .navbar-nav {
+        a:hover {
+            color: $primary-color;
+        }
+
+        a:active {
+            color: $primary-color-dark;
+        }
+    }
+}
+
+.navbar-transparent {
+    background-color: transparent;
+    border-color: transparent;
+}

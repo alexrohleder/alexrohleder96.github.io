@@ -1,6 +1,7 @@
 {
-    "name": "Alex Rohleder Portfólio",
+    "name": "Theme name not created yet :)",
     "dependencies": {
+        "bootstrap": "4.*",
         "bourbon": "4.2.3"
     }
 }

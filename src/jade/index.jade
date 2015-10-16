@@ -1,27 +1,49 @@
-extends ./template/_master
+extends templates/master
+block   content
 
-block content
-    
-    #content
-        include _header
+    header.header.p-t-lg(style="background-image: url(img/headerbg.png)")
+
+        nav.navbar.navbar-transparent.navbar-theme
+            div.container
+
+                a.navbar-brand(href) ALEXROHLEDER
+                a.navbar-toggler.hidden-md-up.pull-right ☰
+
+                div.navbar-toggleable-sm.collapse
+                    ul.navbar-nav.nav.pull-right
+                        li.nav-item
+                            a.nav-link(href="#home") início
+                        li.nav-item
+                            a.nav-link(href="#about") sobre
+                        li.nav-item
+                            a.nav-link(href="#services") serviços
+                        li.nav-item
+                            a.nav-link(href="#skills") habilidades
+                        li.nav-item
+                            a.nav-link(href="#experiense") experiências
+                        li.nav-item
+                            a.nav-link(href="#portfolio") portfólio
+                        //li.nav-item
+                            a.nav-link(href="#blog") Blog
+                        li.nav-item
+                            a.nav-link(href="#contact") contato
+
+
+        div.hero
+            div.container
+                div.row
+                    div.col-xs-12.col-md-10
+
+                        h1 Desbrave a <span class="text-featured">internet</span> e encontre um novo mercado <span class="text-featured">para o seu negócio</span>.
+                        p.lead Eu como seu guia nesta jornada trabalharei de forma profissional na criação de seu novo website ou sistema web, com transparência, suporte e qualidade de excelência desde a primeira entrega do produto até sua versão final.
+                        a.btn.btn-lg.btn-primary(href="#contact") Entre em Contato
+
+    main.container-fluid
         
-        .content
-            main.container-fluid
-                .row
-                    section.col-xs-12#about
-                        include _about
-                .row
-                    section.col-xs-12#skills
-                        include _skills
-                .row
-                    section.col-xs-12#career
-                        include _career
-                //.row
-                    section.col-xs-12#services
-                        include _services
-                //.row
-                    section.col-xs-12#portfolio
-                        include _portfolio
-                .row
-                    section.col-xs-12#contact
-                        include _contact
+        include templates/partials/sections/about
+        include templates/partials/sections/services
+        include templates/partials/sections/skills
+        include templates/partials/sections/experiense
+        include templates/partials/sections/portfolio
+        //include templates/partials/sections/blog
+        include templates/partials/sections/contact

@@ -1,0 +1,36 @@
+doctype
+html(lang="en")
+    head
+        base(src="/portfolio/")
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible", content="ie=edge")
+
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="author", content="Alex Rohleder")
+        meta(name="description", content="")
+        meta(name="robots", content="index,follow")
+
+        title="Criação de Sites e Sistemas Web | Freelancer Alex Rohleder"
+
+        script(type="application/ld+json")!=JSON.stringify(jsonld)
+
+        script(src="js/vendor/modernizr.min.js")
+        script(src="js/vendor/retina.min.js")
+
+        link(rel="stylesheet", href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:700|Work+Sans:300,400,500,600|Satisfy")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+        link(rel="stylesheet", href="css/main.css")
+
+    body
+
+        block loading
+            //.foreground
+                .foreground-logotype.animated.infinite.flash="ALEX ROHLEDER"
+
+        .content
+            block content
+
+        script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js")
+        script(src="js/main.min.js")

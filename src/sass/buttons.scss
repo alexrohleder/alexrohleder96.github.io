@@ -1,0 +1,29 @@
+
+.btn-primary {
+    @include button-variant($primary-color-text, $primary-color, $primary-color);
+}
+
+.btn-secondary {
+    @include button-variant($primary-text-color, white, white);
+}
+
+.btn-primary-outline {
+    @include button-outline-variant($primary-color);
+}
+
+.btn-secondary-outline {
+    @include button-outline-variant(white);
+}
+
+.btn-primary-outline,
+.btn-secondary-outline,
+.btn-info-outline,
+.btn-success-outline,
+.btn-warning-outline,
+.btn-danger-outline {
+    border-width: 2px;
+}
+
+.btn {
+    @include transition(all 0.3s);
+}

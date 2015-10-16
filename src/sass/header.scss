@@ -1,0 +1,48 @@
+
+.header {
+    background-color: $primary-color;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: table;
+    width: 100%;
+    height: 110vh;
+    padding: 0;
+    position: relative;
+
+    &.p-t-lg {
+        padding-top: 60px !important;
+    }
+
+    .hero {
+        display: table-cell;
+        vertical-align: middle;
+        color: $primary-color-text;
+
+        h1 {
+            letter-spacing: 0.2rem;
+        }
+    }
+
+    .navbar {
+        z-index: 2000;
+    }
+
+    .carousel {
+        z-index: 1000;
+
+        &,
+        .carousel-inner,
+        .carousel-item,
+        .carousel-img {
+            height: 110vh;
+        }
+
+        .carousel-img {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}

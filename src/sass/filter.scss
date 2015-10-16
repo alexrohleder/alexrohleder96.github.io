@@ -1,0 +1,119 @@
+
+$timing: 0.3s;
+
+.filter-items {
+    padding: 2rem 0 0 0;
+    position: relative;
+    list-style: none;
+    margin-bottom: 0;
+
+    .filter-item {
+        height: 300px;
+        padding: 0;
+        @include transition(opacity $timing * 2, transform $timing * 2);
+
+        &.disabled {
+            opacity: 0.1;
+            @include transform(scale(0.5));
+        }
+
+        figure {
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+
+            img {
+                height: 100%;
+            }
+
+            figcaption {
+                color: $primary-color-text;
+                text-transform: uppercase;
+                font-size: 1.25rem;
+
+                &,
+                a {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                }
+
+                a {
+                    background: transparent;
+                    z-index: 1000;
+                    opacity: 0.5;
+                    @include transition(background $timing);
+                }
+
+                h1,
+                p {
+                    z-index: 2000;
+                    margin: 0;
+                }
+
+                h1 {
+                    color: $primary-color-text;
+                    word-spacing: -0.15em;
+                    position: absolute;
+                    font-weight: bold;
+                    width: 100%;
+                    opacity: 0;
+                    top: 50%;
+                    @include transition(transform $timing, color $timing);
+                    @include transform(translate3d(0, -50%, 0));
+                }
+
+                p {
+                    color: $primary-color-text;
+                    position: absolute;
+                    font-size: 68.5%;
+                    padding: 2em;
+                    width: 100%;
+                    opacity: 0;
+                    bottom: 0;
+                    left: 0;
+                    @include transition(transform $timing, opacity $timing);
+                    @include transform(translate3d(0, 10px, 0));
+                }
+
+                &:hover {
+                    a {
+                        background: $primary-color-dark;
+                    }
+
+                    h1,
+                    p {
+                        opacity: 1;
+                    }
+
+                    h1 {
+                        @include transform(translate3d(0, -50%, 0) translate3d(0, -40px, 0));
+                    }
+
+                    p {
+                        @include transform(translate3d(0, 0, 0));
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    h1,
+                    p {
+                        opacity: 1;
+                    }
+
+                    h1 {
+                        @include transform(translate3d(0, -50%, 0) translate3d(0, -40px, 0));
+                    }
+
+                    p {
+                        @include transform(translate3d(0, 0, 0));
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+
+.history {
+    text-align: left;
+    margin-bottom: 1rem;
+    display: block;
+    width: 100%;
+
+    .date,
+    .name {
+        border-bottom: 1px solid $divider-color;
+        margin-bottom: 0.7rem;
+    }
+
+    .name {
+        h4 {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+    }
+
+    strong {
+        margin: 0 1rem;
+    }
+
+    h4 {
+        display: inline-block;
+
+        small {
+            color: $secondary-text-color;
+            margin: 0.33rem 0;
+            display: block;
+            font-size: 0.8rem;
+        }
+    }
+
+    @include clearfix(); // from bootstrap, this fix the height of the .history bug because of the floating content
+    @media (min-width: map-get($grid-breakpoints, "sm")) {
+        .description {
+            border-left: 1px solid $divider-color;
+        }
+
+        .date {
+            margin-bottom: 0;
+        }
+
+        .name {
+            border-bottom: 0;
+        }
+    }
+}

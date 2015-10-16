@@ -1,0 +1,29 @@
+
+.progress-list {
+    list-style: none;
+    padding: 0;
+
+    .progress-title {
+        color: $secondary-text-color;
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+
+    .progress {
+        background: none;
+        border-radius: 0;
+        height: 4px;
+    }
+
+    .progress-bar {
+        background: $primary-color;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, "sm")) {
+    .progress-bar {
+        background-color: $primary-color;
+    }
+}
