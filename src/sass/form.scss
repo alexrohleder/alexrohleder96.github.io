@@ -1,13 +1,4 @@
 
-/**
- * Minimal Form Interface (orginaly on: tympanus.net/codrops/2014/04/01/minimal-form-interface/)
- *
- * Refactored version of the Codrop's minimal form interface, now simplier, in jQuery and SASS.
- *
- * @author Alex Rohleder <alexrohleder96@outlook.com> <alexrohleder.com.br>
- * @version 1.0
- */
-
 $background: $primary-color-dark;
 $color: $primary-color-text;
 $font-size: 32px;
@@ -19,7 +10,6 @@ $animation-time: 0.4s;
 .ar-form {
     position: relative;
     text-align: left;
-    max-width: 860px;
     height: 160px;
     width: 100%;
 
@@ -47,11 +37,10 @@ $animation-time: 0.4s;
         label {
             transition: opacity $animation-time, transform $animation-time;
             transform: translateY(-100%);
-            padding-left: $padding;
             overflow: hidden;
             display: block;
-            opacity: 0;
             margin: 0;
+            opacity: 0;
         }
 
         input {
@@ -70,7 +59,7 @@ $animation-time: 0.4s;
             height: auto;
 
             label {
-                    transform: translateY(0);
+                transform: translateY(0);
                 opacity: 1;
 
             }
@@ -79,8 +68,7 @@ $animation-time: 0.4s;
 
     .progress {
         z-index: 100;
-        background: $background;
-        opacity: 0.5;
+        background: darken($background, 10%);
         height: 4px;
         width: 100%;
 
@@ -119,7 +107,6 @@ $animation-time: 0.4s;
 
     .count,
     .error {
-        padding: 0 $padding;
         float: left;
     }
 

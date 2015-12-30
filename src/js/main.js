@@ -1,4 +1,5 @@
 
+
 /**
  * Minimal Form Interface (orginaly on: tympanus.net/codrops/2014/04/01/minimal-form-interface/)
  *
@@ -114,12 +115,20 @@ $(function () {
         }
 
         /**
+         * Check if the key pressed is an enter, if so execute the submition.
+         */
+
+        var onQuestionWrite = function (e) {
+            if (e.which == 13) next.click();
+        }
+
+        /**
          * initial dom manipulations.
          * and event binding.
          */
 
         form.find('.count .total').html(questions.length);
-        question.on('focus', onQuestionFocus);
+        questions.on('focus', onQuestionFocus).on('keypress', onQuestionWrite);
         next.on('click', onQuestionSubmit);
         progress.on(transEndEventName, onTransitionEnd);
     }
@@ -203,6 +212,8 @@ $(function () {
                     service_tab.velocity('fadeIn');
                 }
             });
+        ev.stopPropagation();
+        ev.preventDefault();
     });
 
     /**
@@ -223,6 +234,14 @@ $(function () {
         $(this).addClass('active');
 
         ev.stopPropagation();
+    });
+
+    /**
+     * JavaScript Fix for z-index on portfolio figcaptions.
+     */
+
+    $('#portfolio figcaption h1, #portfolio figcaption p').on('click', function (ev) {
+        window.open($(this).parent().find('a').attr('href'), '_blank');
     });
 
     /**

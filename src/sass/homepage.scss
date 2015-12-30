@@ -7,43 +7,8 @@
     }
 }
 
-#skills {
-    .btn-primary-outline {
-        color: $primary-text-color;
-
-        &:hover,
-        &:focus {
-            color: $primary-color-text;
-        }
-    }
-}
-
 #contact {
-    a {
-        text-decoration: underline;
-        color: white;
-
-        &:hover,
-        &:active {
-            color: white;
-        }
-    }
-
-    .m-b-lg {
-        display: table;
-        margin-top: 64px;
-        height: 200px;
-        width: 100%;
-
-        .d-t {
-            width: 100%;
-            vertical-align: middle;
-            display: table-cell;
-        }
-
-        form {
-            max-width: 100%;
-            width: 100%;
-        }
-    }
+	form {
+		margin: 6rem 0px;
+	}
 }

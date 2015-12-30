@@ -1,5 +1,5 @@
 
-.m-a-sm { margin:        ($spacer * 0.5) !important; }
+.m-a-sm { margin:        ($spacer   * 0.5) !important; }
 .m-t-sm { margin-top:    ($spacer-y * 0.5) !important; }
 .m-r-sm { margin-right:  ($spacer-y * 0.5) !important; }
 .m-b-sm { margin-bottom: ($spacer-y * 0.5) !important; }
@@ -7,7 +7,7 @@
 .m-x-sm { margin-right:  ($spacer-x * 0.5) !important; margin-left:   ($spacer-x * 0.5) !important; }
 .m-y-sm { margin-top:    ($spacer-y * 0.5) !important; margin-bottom: ($spacer-y * 0.5) !important; }
 
-.p-a-sm { padding:        ($spacer * 0.5) !important; }
+.p-a-sm { padding:        ($spacer   * 0.5) !important; }
 .p-t-sm { padding-top:    ($spacer-y * 0.5) !important; }
 .p-r-sm { padding-right:  ($spacer-y * 0.5) !important; }
 .p-b-sm { padding-bottom: ($spacer-y * 0.5) !important; }
@@ -17,4 +17,7 @@
 
 .bg-primary { background-color: $primary-color !important; }
 .bg-primary-dark { background-color: $primary-color-dark !important; }
-.bg-primary, .bg-primary-dark {color: $primary-color-text !important; }
+.bg-primary, .bg-primary-dark, .bg-primary a, .bg-primary-dark a {color: $primary-color-text !important; }
+.bg-primary a, .bg-primary-dark a { text-decoration: underline; }
+.text-center { text-align: center; }
+.text-featured { color: $primary-color; }

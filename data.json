@@ -3,12 +3,12 @@
         "@context": "http://schema.org",
         "@type": "LocalBusiness",
         "name": "Alex Rohleder",
-        "description": "",
-        "logo": "https://www.alexrohleder.com.br/img/logo/retina.png",
+        "description": "Desenvolvedor freelancer atuante na região de Santa Maria com grandes habilidades acessiveis a você.",
+        "logo": "https://www.alexrohleder.com.br/img/favicon/512.jpg",
         "url": "https://www.alexrohleder.com.br",
         "telephone": "(055)8155-7066",
         "email": "contato@alexrohleder.com.br",
-        "openingHours": "Mo-Fr 08:00-08:00",
+        "openingHours": "Mo-Mo 08:00-08:00",
         "foundingDate": "2015",
         "sameAs": ["https://www.github.com/alexrohleder96", "https://www.linkedin.com/in/alexrohleder"],
         "address":[{"@type": "PostalAddress", "addressLocality": "Santa Maria", "addressRegion": "RS", "addressCountry": "BRA", "PostalCode": "97105-070"}]
@@ -27,6 +27,7 @@
         "AngularJS": "http://angularjs.org",
         "Bootstrap": "http://getbootstrap.com",
         "Grunt": "http://gruntjs.com",
+        "Gulp": "http://gulpjs.com",
         "Bower": "http://bower.io",
         "SASS": "http://sass-lang.com",
         "MySQL": "http://mysql.com",
@@ -38,8 +39,7 @@
         "Redmine": "http://redmine.org/",
         "Rails": "http://rubyonrails.org",
         "NodeJS": "https://nodejs.org",
-        "Node WebKit": "http://nwjs.io/",
-        "Cordova/Phonegap": "https://cordova.apache.org/",
+        "Phonegap": "http://phonegap.com/",
         "Ionic": "http://ionicframework.com/",
         "Apache": "http://httpd.apache.org/",
         "Nginx": "http://nginx.org",
@@ -62,38 +62,43 @@
     ],
     "projects": [
         {
-            "name": "Codeburner",
-            "slug": "codeburner",
-            "url" : "https://github.com/codeburnerframework",
-            "tag" : "projeto"
+            "name"  : "Codeburner",
+            "slug"  : "codeburner",
+            "url"   : "https://github.com/codeburnerframework",
+            "tag"   : "projeto",
+            "desc"  : "Em breve...",
+            "tools" : "PHP, PHPUnit, BlackFire Profiler, Scrutinizer"
         },
         {
-            "name": "Portfolio",
-            "slug": "portfolio",
-            "url" : "https://www.alexrohleder.com.br",
-            "tag" : "web"
+            "name"  : "Portfolio",
+            "slug"  : "portfolio",
+            "url"   : "https://www.alexrohleder.com.br",
+            "tag"   : "web",
+            "desc"  : "Em breve...",
+            "tools" : "jQuery, GulpJS, Bootstrap, SASS, JADE, Bower"
         },
         {
-            "name": "Puma Detetives",
-            "slug": "puma-detetives",
-            "url" : "https://www.pumadetetives.com.br",
-            "tag" : "web"
+            "name"  : "Puma Detetives",
+            "slug"  : "puma-detetives",
+            "url"   : "https://www.pumadetetives.com.br",
+            "tag"   : "web",
+            "desc"  : "Em breve...",
+            "tools" : "PHP, Slim, SQLite, jQuery, Bootstrap, Twig"
         },
         {
-            "name": "Bella Forma",
-            "slug": "bella-forma",
-            "url" : "https://www.bellaformasm.com.br",
-            "tag" : "web"
+            "name"  : "Bella Forma",
+            "slug"  : "bella-forma",
+            "url"   : "https://www.bellaformasm.com.br",
+            "tag"   : "web",
+            "desc"  : "Em breve...",
+            "tools" : "PHP, Slim, Eloquent, Twig, SQLite, jQuery, Bootstrap, SASS, Grunt"
         },
-        {
-            "name": "AGII",
-            "slug": "agii",
-            "tag" : "sistema"
-        },
-        {
-            "name": "Blog",
-            "slug": "blog",
-            "tag" : "web"
+          {
+             "name" : "AGII",
+             "slug" : "agii",
+             "tag"  : "sistema",
+             "desc" : "Em breve...",
+             "tools": "PHP, Laravel, PostgreSQL, jQuery, Bootstrap"
         }
     ]
 }

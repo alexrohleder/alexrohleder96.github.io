@@ -1,49 +1,193 @@
-extends templates/master
-block   content
+doctype
+html(lang="pt-BR")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible", content="ie=edge")
 
-    header.header.p-t-lg(style="background-image: url(img/headerbg.png)")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="author", content="Alex Rohleder")
+        meta(name="description", content="Desenvolvedor freelancer atuante na região de Santa Maria com grandes habilidades acessiveis a você.")
+        meta(name="robots", content="index,follow")
 
-        nav.navbar.navbar-transparent.navbar-theme
-            div.container
+        title Criação de Sites e Sistemas Web | Alex Rohleder
 
-                a.navbar-brand(href) ALEXROHLEDER
-                a.navbar-toggler.hidden-md-up.pull-right ☰
+        meta(property="og:type", content="website")
+        meta(property="og:url", content="https://wwww.alexrohleder.com.br")
+        meta(property="og:image", content="https://www.alexrohleder.com.br/img/favicon/150.jpg")
 
-                div.navbar-toggleable-sm.collapse
-                    ul.navbar-nav.nav.pull-right
-                        li.nav-item
-                            a.nav-link(href="#home") início
-                        li.nav-item
-                            a.nav-link(href="#about") sobre
-                        li.nav-item
-                            a.nav-link(href="#services") serviços
-                        li.nav-item
-                            a.nav-link(href="#skills") habilidades
-                        li.nav-item
-                            a.nav-link(href="#experiense") experiências
-                        li.nav-item
-                            a.nav-link(href="#portfolio") portfólio
-                        //li.nav-item
-                            a.nav-link(href="#blog") Blog
-                        li.nav-item
-                            a.nav-link(href="#contact") contato
+        script(type="application/ld+json")!=JSON.stringify(jsonld)
+        script(src="js/modernizr.min.js")
+        script(src="js/retina.min.js")
 
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:700|Work+Sans:300,400,500,600|Satisfy")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+        link(rel="stylesheet", href="css/main.css")
 
-        div.hero
-            div.container
-                div.row
-                    div.col-xs-12.col-md-10
+    body
 
-                        h1 Desbrave a <span class="text-featured">internet</span> e encontre um novo mercado <span class="text-featured">para o seu negócio</span>.
-                        p.lead Eu como seu guia nesta jornada trabalharei de forma profissional na criação de seu novo website ou sistema web, com transparência, suporte e qualidade de excelência desde a primeira entrega do produto até sua versão final.
-                        a.btn.btn-lg.btn-primary(href="#contact") Entre em Contato
+        div.foreground
+            div.foreground-logotype.animated.infinite.flash="ALEXROHLEDER"
 
-    main.container-fluid
-        
-        include templates/partials/sections/about
-        include templates/partials/sections/services
-        include templates/partials/sections/skills
-        include templates/partials/sections/experiense
-        include templates/partials/sections/portfolio
-        //include templates/partials/sections/blog
-        include templates/partials/sections/contact
+        div.content
+            header.header.p-t-lg(style="background-image: url(img/background.jpg")
+                nav.navbar.navbar-transparent.navbar-theme
+                    div.container
+                        a.navbar-brand(href) ALEXROHLEDER
+                        a.navbar-toggler.hidden-md-up.pull-right ☰
+                        div.navbar-toggleable-sm.collapse
+                            ul.navbar-nav.nav.pull-right
+                                li.nav-item: a.nav-link(href="#about") sobre
+                                li.nav-item: a.nav-link(href="#services") serviços
+                                li.nav-item: a.nav-link(href="#skills") habilidades
+                                li.nav-item: a.nav-link(href="#experiense") experiência
+                                li.nav-item: a.nav-link(href="#portfolio") portfólio
+                                li.nav-item: a.nav-link(href="#contact") contato
+                div.hero
+                    div.container
+                        div.row
+                            div.col-xs-12.col-md-8
+                                h1 Desbrave a #[span.text-featured internet] e encontre um novo mercado #[span.text-featured para o seu negócio].
+                                p.lead Eu como seu guia nesta jornada trabalharei de forma profissional na criação de seu novo website ou sistema web, com transparência, suporte e qualidade de excelência desde a primeira entrega do produto até sua versão final.
+                                p.lead
+                                    a.btn.btn-lg.btn-primary(href="#contact") Entre em Contato
+            main
+                section#about
+                    h1 #[span Sobre] detalhes profissionais
+                    div.container
+                        div.row
+                            div.col-xs-12
+                                p Sou técnico em informática pelo Instituto Federal Farroupilha, onde aprendi novos conceitos e encontrei o caminho do desenvolvedor. Como autodidata e um apreciador de novos conhecimentos busco sempre aprender e me atualizar, não me contendo com solucionar um problema, mas sim solucionar ele da melhor maneira.
+                                p Atualmente cursando Sistemas de Informação pela Universidade Federal de Santa Maria, venho refinando em forma teórica todos os conceitos que já carrego de meus estudos práticos, aprendendo novos conceitos que estão me tornando um profissional cada dia melhor.
+                                p Trabalho como freelancer e bolsista em projetos ligados ao desenvolvimento de software na universidade, tenho maestria no desenvolvimento de aplicações web complexas, e total segurança para afirmar que posso agregar valor a uma equipe, não me retenho ao comodismo e estou sempre buscando a excelência em meu trabalho.
+                                a(href="/rsrc/Curriculum Vitae - Alex Rohleder.pdf", target="_blank").btn.btn-primary.m-t-sm.m-r-sm Fazer Download do meu Currículo
+                                a(href="http://lattes.cnpq.br/1262741056343776", target="_blank").btn.btn-primary-outline.m-t-sm Acessar meu Lattes
+                section#services
+                    h1 #[span Serviços] de excelência que ofereço
+                    div.container
+                        div.row
+                            div.col-xs-12.text-center.m-b-sm
+                                button(data-tab="#services-criacao-de-sites").m-b-sm.m-r-sm.btn.btn-primary-outline.active Criação de Sites
+                                button(data-tab="#services-criacao-de-sistemas").m-b-sm.m-r-sm.btn.btn-primary-outline Criação de Sistemas
+                        div.row.tab-content.m-t-sm
+                            div#services-criacao-de-sites.col-xs-12.active
+                                p Tenha seu site nos mais altos padrões do mercado, com total <b>suporte pós entrega</b> e atualizações que não afetem a estrutura do projeto, <b>certificado SSL</b> para conexões seguras com HTTPS, <b>10 contas de e-mail</b>, um <b>alto desempenho</b> com serviços mundialmente conhecidos para otimização do carregamento, <b>responsividade a qualquer dispositivo</b>, testado nos mais populares navegadores, <b>design único e impecável</b>, possibilidade de integração de <b>conteúdo dinâmico</b> e com <b>ótimo custo benefício</b>.
+                                p Peça um#[a(href="#contact") orçamento gratuito] ou #[a(href="/criacao-de-sites.html") mais informações]
+                            div#services-criacao-de-sistemas.col-xs-12
+                                p Desenvolvimento ágil de sistemas com <b>suporte e treinamento</b>, seguindo padrões de projeto e métodos de desenvolvimento aprovados internacionalmente, <b>garantindo a consistência do sistema</b> e seu grau de aprovação. <b>Construa seu sistema web com altos padrões</b> oferecidos no serviço de criação de sites mais a <b>bem planejada, estruturada e aplicada</b> automatização da lógica de seu negócio.
+                                p Peça um#[a(href="#contact") orçamento gratuito] ou #[a(href="/criacao-de-sistemas.html") mais informações]
+                        footer
+                            small Alguma dúvida sobre como funciona o processo de desenvolvimento? Você pode #[a(href="/processo-de-desenvolvimento.html") ver como ele funciona aqui].
+
+                section#skills
+                    h1 #[span Habilidades] que eu me orgulho
+                    div.container
+                        div.row
+                            div.col-xs-12.col-md-6
+                                ul.progress-list
+                                    each skill in skills
+                                        li.progress-title=skill.progress+"% em "+skill.name
+                                        li.progress-progress
+                                            div.progress
+                                                div.progress-bar(style="width:"+skill.progress+"%;")
+                            div.col-xs-12.col-md-6.text-left
+                                h3.featured Ferramentas que Utilizo
+                                p Durante os anos em que trabalhei com estas tecnologias acabei por me adaptar com alguns de seus recursos e ferramentas, você pode acompanhar uma lista das principais utilizadas frequêntemente logo abaixo.
+                                each link, resource in resources
+                                    a(href=link, title="Veja mais sobre "+resource, target="_blank").btn.btn-sm.btn-primary-outline.m-r-sm.m-b-sm=resource
+                section#experiense
+                    h1 #[span Experiências] que vivenciei
+                    div.container
+                        div.row
+                            div.col-xs-12.col-md-6
+                                h2 Educational
+                                div.history.row
+                                    div.col-xs-12.col-md-6.data
+                                        div.date
+                                            h4 <small>Fevereiro</small> 2011
+                                            strong -
+                                            h4 <small>Dezembro</small> 2013
+                                        div.name
+                                            h4 IFF¹ <small>Técnico em Informática</small>
+                                    div.col-xs-12.col-md-6.description.
+                                        Desenvolve programas de computador, seguindo as especificações e paradigmas da lógica de programação e das linguagens de programação. Utiliza ambientes de desenvolvimento de sistemas, sistemas operacionais e banco de dados.        
+                                div.history.row
+                                    div.col-xs-12.col-md-6.data
+                                        .date
+                                            h4 <small>Agosto</small> 2014
+                                            strong -
+                                            h4 Atual
+                                        div.name
+                                            h4 UFSM² <small>Sistemas de Informação</small>
+                                    div.col-xs-12.col-md-6.description.
+                                        Qualifica para o projeto e construção de softwares e serviços computacionais e também para o uso de sistemas computadorizados em outras áreas da atividade humana, a fim de viabilizar ou aumentar a produtividade e a qualidade de todos os tipos de procedimentos.
+                            div.col-xs-12.col-md-6
+                                h2 Professional
+                                div.history.row
+                                    div.col-xs-12.col-md-6.data
+                                        div.date
+                                            h4 <small>Fevereiro</small> 2015
+                                            strong -
+                                            h4 <small>Agosto</small> 2015
+                                        div.name
+                                            h4 UFSM² <small>Desenvolvedor Web</small>
+                                    div.col-xs-12.col-md-6.description.
+                                        Desenvolve juntamente a uma equipe, um sistema de gestão e agregação de informações para o hospital universitário de Santa Maria. Onde Médicos e servidores da universidade fazem uso para automação de tarefas que antes eram totalmente no papel.
+                                div.history.row
+                                    div.col-xs-12.col-md-6.data
+                                        div.date
+                                            h4 <small>Setembro</small> 2015
+                                            strong -
+                                            h4 Atual
+                                        div.name
+                                            h4 UFSM² <small>Gerente de Configuração</small>
+                                    div.col-xs-12.col-md-6.description.
+                                        Disponibiliza um ambiente e infra-estrutura de gerenciamento de configuração para a equipe do projeto da universidade, tem encargo de montar, configurar e manter um cluster com virtualização de serviços em forma de uma pequena cloud para a equipe.
+                        footer
+                            small 1: Instituto Federal de Educação, Ciência e Tecnologia Farroupilha. 2: Universidade Federal de Santa Maria.
+                section#portfolio
+                    h1 #[span Portfolio] com alguns trabalhos
+                    div.container
+                        div.text-center.hidden-md-down
+                            button(data-items=".filter-items", data-type="*").btn.btn-primary-outline.m-b-sm.m-r-sm.active Tudo
+                            each tag in tags
+                                button(data-items=".filter-items", data-type=tag.id).btn.btn-primary-outline.m-b-sm.m-r-sm=tag.name
+                        ul.filter-items
+                            each project in projects
+                                li(data-type=project.tag).filter-item.col-xs-12.col-md-4
+                                    figure
+                                        img(src="img/" + project.slug + ".png", alt="Representação do projeto " + project.name)
+                                        figcaption
+                                            a(href=project.url, target="_blank")
+                                            h1=project.name
+                section#contact.bg-primary
+                    h1 #[span Contato] direto comigo
+                    div.container
+                        div.row
+                            div.col-xs-12
+                                p Você também pode me ligar pelo número #[a(href="tel:5581557066") (55) 8155-7066], me contatar pelo e-mail #[a(href="mailto:contato@alexrohleder.com.br") contato@alexrohleder.com.br] ou preencher o formulário abaixo.
+                                p Caso tenha alguma dúvida sobre como tudo funciona, você pode ver rapidamente a #[a(href=) seção de perguntas frequentes].
+
+                                form.ar-form(autocomplete="off", novalidate)
+                                    ol.questions
+                                        li.question.current
+                                            span: label(for="contact-name")="Qual o seu nome?"
+                                            input(id="contact-name", name="contact-name", type="text", required)
+                                        li.question
+                                            span: label(for="contact-email")="E seu e-mail?"
+                                            input(id="contact-email", name="contact-email", type="email", required)
+                                        li.question
+                                            span: label(for="contact-message")="Então... O que você deseja?"
+                                            input(id="contact-message", name="contact-message", type="text", required)
+                                    div.next
+                                        div.arrow
+                                    div.progress
+                                        div.progress-bar
+                                    div.error &nbsp;
+                                    div.count #[span.itr 1] / #[span.total]
+                                    h1
+
+                                p.text-center ©2015 Alex Rohleder
+
+        script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js")
+        script(src="js/main.min.js")

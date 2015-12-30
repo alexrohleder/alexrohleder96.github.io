@@ -7,6 +7,7 @@
 
     .date,
     .name {
+        text-align: left;
         border-bottom: 1px solid $divider-color;
         margin-bottom: 0.7rem;
     }
@@ -27,9 +28,9 @@
 
         small {
             color: $secondary-text-color;
+            font-size: 0.8rem;
             margin: 0.33rem 0;
             display: block;
-            font-size: 0.8rem;
         }
     }
 
@@ -37,6 +38,7 @@
     @media (min-width: map-get($grid-breakpoints, "sm")) {
         .description {
             border-left: 1px solid $divider-color;
+            margin-left:-1px; // for overlay the .data border.
         }
 
         .date {

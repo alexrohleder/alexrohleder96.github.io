@@ -5,7 +5,7 @@ Para editar o código fonte primeiro instale as depêndecias.
 $ npm install
 ```
 
-Sempre que trabalhar no projeto inicialize o grunt.
+Sempre que trabalhar no projeto inicialize o gulp.
 ```
-$ grunt
+$ gulp
 ```
