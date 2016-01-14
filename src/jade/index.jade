@@ -37,10 +37,10 @@ html(lang="pt-BR")
                         div.navbar-toggleable-sm.collapse
                             ul.navbar-nav.nav.pull-right
                                 li.nav-item: a.nav-link(href="#about") sobre
-                                li.nav-item: a.nav-link(href="#services") serviços
                                 li.nav-item: a.nav-link(href="#skills") habilidades
                                 li.nav-item: a.nav-link(href="#experiense") experiência
                                 li.nav-item: a.nav-link(href="#portfolio") portfólio
+                                li.nav-item: a.nav-link(href="#blog") blog
                                 li.nav-item: a.nav-link(href="#contact") contato
                 div.hero
                     div.container
@@ -55,29 +55,18 @@ html(lang="pt-BR")
                     h1 #[span Sobre] detalhes profissionais
                     div.container
                         div.row
-                            div.col-xs-12
-                                p Sou técnico em informática pelo Instituto Federal Farroupilha, onde aprendi novos conceitos e encontrei o caminho do desenvolvedor. Como autodidata e um apreciador de novos conhecimentos busco sempre aprender e me atualizar, não me contendo com solucionar um problema, mas sim solucionar ele da melhor maneira.
-                                p Atualmente cursando Sistemas de Informação pela Universidade Federal de Santa Maria, venho refinando em forma teórica todos os conceitos que já carrego de meus estudos práticos, aprendendo novos conceitos que estão me tornando um profissional cada dia melhor.
-                                p Trabalho como freelancer e bolsista em projetos ligados ao desenvolvimento de software na universidade, tenho maestria no desenvolvimento de aplicações web complexas, e total segurança para afirmar que posso agregar valor a uma equipe, não me retenho ao comodismo e estou sempre buscando a excelência em meu trabalho.
-                                a(href="/rsrc/Curriculum Vitae - Alex Rohleder.pdf", target="_blank").btn.btn-primary.m-t-sm.m-r-sm Fazer Download do meu Currículo
-                                a(href="http://lattes.cnpq.br/1262741056343776", target="_blank").btn.btn-primary-outline.m-t-sm Acessar meu Lattes
-                section#services
-                    h1 #[span Serviços] de excelência que ofereço
-                    div.container
-                        div.row
-                            div.col-xs-12.text-center.m-b-sm
-                                button(data-tab="#services-criacao-de-sites").m-b-sm.m-r-sm.btn.btn-primary-outline.active Criação de Sites
-                                button(data-tab="#services-criacao-de-sistemas").m-b-sm.m-r-sm.btn.btn-primary-outline Criação de Sistemas
-                        div.row.tab-content.m-t-sm
-                            div#services-criacao-de-sites.col-xs-12.active
-                                p Tenha seu site nos mais altos padrões do mercado, com total <b>suporte pós entrega</b> e atualizações que não afetem a estrutura do projeto, <b>certificado SSL</b> para conexões seguras com HTTPS, <b>10 contas de e-mail</b>, um <b>alto desempenho</b> com serviços mundialmente conhecidos para otimização do carregamento, <b>responsividade a qualquer dispositivo</b>, testado nos mais populares navegadores, <b>design único e impecável</b>, possibilidade de integração de <b>conteúdo dinâmico</b> e com <b>ótimo custo benefício</b>.
-                                p Peça um#[a(href="#contact") orçamento gratuito] ou #[a(href="/criacao-de-sites.html") mais informações]
-                            div#services-criacao-de-sistemas.col-xs-12
-                                p Desenvolvimento ágil de sistemas com <b>suporte e treinamento</b>, seguindo padrões de projeto e métodos de desenvolvimento aprovados internacionalmente, <b>garantindo a consistência do sistema</b> e seu grau de aprovação. <b>Construa seu sistema web com altos padrões</b> oferecidos no serviço de criação de sites mais a <b>bem planejada, estruturada e aplicada</b> automatização da lógica de seu negócio.
-                                p Peça um#[a(href="#contact") orçamento gratuito] ou #[a(href="/criacao-de-sistemas.html") mais informações]
-                        footer
-                            small Alguma dúvida sobre como funciona o processo de desenvolvimento? Você pode #[a(href="/processo-de-desenvolvimento.html") ver como ele funciona aqui].
-
+                            div.col-md-4.col-xs-12
+                                span.thumbnail-icon: i.fa.fa-bolt
+                                p Sou um autodidata, gosto muito de aprender coisas novas e buscar sempre meu aperfeiçoamento como profissional. Estou sempre buscando me mantendo sempre atualizado, o estudo é pra sempre, e quando se faz sobre algo que gosta vira rotina!
+                            div.col-md-4.col-xs-12
+                                span.thumbnail-icon: i.fa.fa-star
+                                p Gosto de buscar a melhor solução para um problema, não me atenho a soluções temporárias, que não antendam de todas as formas os reais requisitos ou entreguem ferindo princípios das boas práticas, afinal o profissional é sempre lembrado pelo que faz.
+                            div.col-md-4.col-xs-12
+                                span.thumbnail-icon: i.fa.fa-heart
+                                p Desenvolver é o que eu faço, e sempre farei! Não há como negar, até em casa descanço desenvolvendo projetos pessoais, esta é e sempre será a minha área, trabalho com meu hobbie, não há como não fazer mal o que faz com vontade!
+                            div.col-xs-12.buttons
+                                a(href="/rsrc/Curriculum Vitae - Alex Rohleder.pdf", target="_blank").btn.btn-primary.m-r-sm Fazer Download do meu Currículo
+                                a(href="http://lattes.cnpq.br/1262741056343776", target="_blank").btn.btn-primary-outline Acessar meu Lattes
                 section#skills
                     h1 #[span Habilidades] que eu me orgulho
                     div.container
@@ -141,7 +130,7 @@ html(lang="pt-BR")
                                         div.name
                                             h4 UFSM² <small>Gerente de Configuração</small>
                                     div.col-xs-12.col-md-6.description.
-                                        Disponibiliza um ambiente e infra-estrutura de gerenciamento de configuração para a equipe do projeto da universidade, tem encargo de montar, configurar e manter um cluster com virtualização de serviços em forma de uma pequena cloud para a equipe.
+                                        Disponibiliza um ambiente e infra-estrutura de versionamento de software, projeta e implanta metodologias de trabalho com software versionado tendo como foco principal a maximização do controle e desempenho do desenvolvimento.
                         footer
                             small 1: Instituto Federal de Educação, Ciência e Tecnologia Farroupilha. 2: Universidade Federal de Santa Maria.
                 section#portfolio
@@ -159,25 +148,34 @@ html(lang="pt-BR")
                                         figcaption
                                             a(href=project.url, target="_blank")
                                             h1=project.name
-                section#contact.bg-primary
+                section#blog
+                    h1 #[span blog] com minhas publicações
+                    div.container
+                        div.row
+                            div#blog-post-body
+                                div.col-xs-12.col-md-4
+                                    a.card.card-block
+                                        div.card-block
+                                            h4.card-title
+                                            p.card-text.c
+                                            p.card-text: small.text-muted
+                section#contact
                     h1 #[span Contato] direto comigo
                     div.container
                         div.row
                             div.col-xs-12
-                                p Você também pode me ligar pelo número #[a(href="tel:5581557066") (55) 8155-7066], me contatar pelo e-mail #[a(href="mailto:contato@alexrohleder.com.br") contato@alexrohleder.com.br] ou preencher o formulário abaixo.
-                                p Caso tenha alguma dúvida sobre como tudo funciona, você pode ver rapidamente a #[a(href=) seção de perguntas frequentes].
-
+                                p Você também pode me ligar pelo número #[a(href="tel:5581557066", alt="Ligar") (55) 8155-7066], me contatar pelo e-mail #[a(href="mailtocontato@alexrohleder.com.br", alt="Enviar e-mail") contato@alexrohleder.com.br] ou preencher o formulário abaixo.
                                 form.ar-form(autocomplete="off", novalidate)
                                     ol.questions
                                         li.question.current
-                                            span: label(for="contact-name")="Qual o seu nome?"
-                                            input(id="contact-name", name="contact-name", type="text", required)
+                                            span: label(for="contact-name") &nbsp;
+                                            input(id="contact-name", name="contact-name", type="text", required, placeholder="Qual o seu nome?")
                                         li.question
-                                            span: label(for="contact-email")="E seu e-mail?"
-                                            input(id="contact-email", name="contact-email", type="email", required)
+                                            span: label(for="contact-email") &nbsp;
+                                            input(id="contact-email", name="contact-email", type="email", required, placeholder="E o seu e-mail?")
                                         li.question
-                                            span: label(for="contact-message")="Então... O que você deseja?"
-                                            input(id="contact-message", name="contact-message", type="text", required)
+                                            span: label(for="contact-message") &nbsp;
+                                            input(id="contact-message", name="contact-message", type="text", required, placeholder="Então... O que deseja?")
                                     div.next
                                         div.arrow
                                     div.progress
@@ -185,9 +183,8 @@ html(lang="pt-BR")
                                     div.error &nbsp;
                                     div.count #[span.itr 1] / #[span.total]
                                     h1
+                                p.text-center ©2016 Alex Rohleder
 
-                                p.text-center ©2015 Alex Rohleder
-
-        script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+        script(src="https://code.jquery.com/jquery-1.12.0.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js")
         script(src="js/main.min.js")

@@ -31,12 +31,12 @@ section {
         margin-bottom: -50px;
     }
 
-    &:nth-child(odd) {
-        background-color: #F9F9F9;
+    &:nth-child(even) {
+        background-color: $section-color-dark;
     }
 
-    &:nth-child(even) {
-        background-color: #F1F1F1;
+    &:nth-child(odd) {
+        background-color: $section-color-light;
     }
 }
 

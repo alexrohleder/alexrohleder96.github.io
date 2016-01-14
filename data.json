@@ -93,12 +93,20 @@
             "desc"  : "Em breve...",
             "tools" : "PHP, Slim, Eloquent, Twig, SQLite, jQuery, Bootstrap, SASS, Grunt"
         },
-          {
-             "name" : "AGII",
+        {
+             "name" : "AGII HUSM",
              "slug" : "agii",
              "tag"  : "sistema",
              "desc" : "Em breve...",
              "tools": "PHP, Laravel, PostgreSQL, jQuery, Bootstrap"
+        },
+        {
+            "name"  : "Blog",
+            "slug"  : "blog",
+            "url"   : "https://blog.alexrohleder.com.br",
+            "tag"   : "web",
+            "desc"  : "Em breve...",
+            "tools" : "Jekyll, Boostrap"
         }
     ]
 }
