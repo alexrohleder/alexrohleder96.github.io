@@ -256,24 +256,33 @@ $(function () {
         success: function (feed) {
             var posts   = feed.responseData.feed.entries;
             var section = $('#blog .row');
-            var body    = $('#blog-post-body > div').clone();
-                          $('#blog-post-body').remove();
-
-            var body_header  = body.find('h4');
-            var body_content = body.find('p.c');
-            var body_link    = body.find('a');
-            var body_footer  = body.find('p > small');
+            var height  = 0;
 
             for (var i = 0; i < 3; ++i) {
                 if (posts[i]) {
+                    var body         = $('#blog-post-body > div').clone();
+                    var body_header  = body.find('h4');
+                    var body_content = body.find('p.c');
+                    var body_link    = body.find('a');
+                    var body_footer  = body.find('p > small');
+
                     body_header.html(posts[i].title);
                     body_content.html(posts[i].contentSnippet);
                     body_link.attr('href', posts[i].link);
                     body_footer.html('Publicado em ' + (new Date(Date.parse(posts[i].publishedDate))).toLocaleDateString());
 
-                    section.html(body);
+                    section.append(body);
+
+                    var body_height = section.find('.card').last().height();
+                             height = body_height > height ? body_height : height;
                 }
             }
+
+            // setting all the cards to the same height
+            section.find('.card').height(height);
+
+            // remove the dummy markup
+            $('#blog-post-body').remove();
         }
     }).error(function () {
         $('nav a[href="#blog"], #blog').remove();
@@ -286,7 +295,11 @@ $(function () {
      * for the submit, here you can define an ajax for example.
      */
 
-    $('#contact form').form({
+    var form = $('#contact form');
+    var form_height = form.height();
+    var form_margin = form.css('margin-top') + ' 0';
+
+    form.form({
         submit: function () {
 
             /**
@@ -300,9 +313,18 @@ $(function () {
                 message: $('#contact-message').val()
             });
 
-            $('#contact form').velocity('fadeOut', {
+            form.velocity('fadeOut', {
                 complete: function () {
-                    $('#contact h1').html('OBRIGADO! LOGO ENTRAREI EM CONTATO :)').velocity('fadeIn');
+                    $('<h1></h1>')
+                        .css({
+                            'height': form_height, 
+                            'line-height': form_height + 'px',
+                            'margin': form_margin,
+                            'display': 'none'
+                        })
+                        .html('OBRIGADO! LOGO ENTRAREI EM CONTATO :)')
+                        .insertAfter(form)
+                        .velocity('fadeIn');
                 }
             });
 

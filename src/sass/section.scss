@@ -1,5 +1,6 @@
 
 section {
+    position: relative;
     padding: 80px 15px;
     text-align: justify;
 
@@ -32,11 +33,11 @@ section {
     }
 
     &:nth-child(even) {
-        background-color: $section-color-dark;
+        background-color: $section-color-light;
     }
 
     &:nth-child(odd) {
-        background-color: $section-color-light;
+        background-color: $section-color-dark;
     }
 }
 
