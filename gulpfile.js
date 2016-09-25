@@ -1,27 +1,27 @@
 
-var gulp       = require('gulp');
-var gutil      = require('gulp-util');
-var compass    = require('gulp-compass');
-var concat     = require('gulp-concat');
-var jade       = require('gulp-jade');
-var uglify     = require('gulp-uglify');
+var gulp    = require('gulp');
+var gutil   = require('gulp-util');
+var compass = require('gulp-compass');
+var concat  = require('gulp-concat');
+var jade    = require('gulp-jade');
+var uglify  = require('gulp-uglify');
 
 gulp.task('sass', function () {
     return gulp.src('src/scss/dist/main.scss')
-               .pipe(compass({css: 'dist/css', sass: 'src/sass/dist', config_file: './compass.rb'}).on('error', gutil.log))
+               .pipe(compass({ css: 'dist/css', sass: 'src/sass/dist', config_file: './compass.rb' }).on('error', gutil.log))
                .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('js', function () {
     return gulp.src('src/js/**/*.js')
                .pipe(concat('main.min.js'))
-               .pipe(uglify()) //gutil.env.type === 'production' ? uglify() : gutil.noop())
+               .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
                .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('jade', function () {
     return gulp.src('src/jade/index.jade')
-               .pipe(jade({locals: require('./data.json')}).on('error', gutil.log))
+               .pipe(jade({ locals: require('./data.json') }).on('error', gutil.log))
                .pipe(gulp.dest('dist'));
 });
 
