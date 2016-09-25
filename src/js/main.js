@@ -245,52 +245,6 @@ $(function () {
     });
 
     /**
-     * Load blog latest three posts and make the blog section.
-     */
-
-    $.ajax({
-        type: 'GET',
-        url: '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://blog.alexrohleder.com.br/feed.xml',
-        dataType: 'jsonp',
-        crossDomain: true,
-        success: function (feed) {
-            var posts   = feed.responseData.feed.entries;
-            var section = $('#blog .row');
-            var height  = 0;
-
-            for (var i = 0; i < 3; ++i) {
-                if (posts[i]) {
-                    var body         = $('#blog-post-body > div').clone();
-                    var body_header  = body.find('h4');
-                    var body_content = body.find('p.c');
-                    var body_link    = body.find('a');
-                    var body_footer  = body.find('p > small');
-
-                    body_header.html(posts[i].title);
-                    body_content.html(posts[i].contentSnippet);
-                    body_link.attr('href', posts[i].link);
-                    body_footer.html('Publicado em ' + (new Date(Date.parse(posts[i].publishedDate))).toLocaleDateString());
-
-                    section.append(body);
-
-                    var body_height = section.find('.card').last().height();
-                             height = body_height > height ? body_height : height;
-                }
-            }
-
-            // setting all the cards to the same height
-            section.find('.card').height(height);
-
-            // remove the dummy markup
-            $('#blog-post-body').remove();
-        }
-    }).error(function () {
-        $('nav a[href="#blog"], #blog').remove();
-    });
-
-
-
-    /**
      * Initializing the contact form and defining the logic
      * for the submit, here you can define an ajax for example.
      */

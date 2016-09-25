@@ -46,7 +46,7 @@ html(lang="pt-BR")
                     div.container
                         div.row
                             div.col-xs-12.col-md-7
-                                h1 Procurando por um #[span.text-featured Desenvolvedor de Verdade]?
+                                h1 Procurando por um #[span.text-featured(title="CNPJ 26.187.271/0001-91") Desenvolvedor de Verdade]?
                                 p.lead Então você acabou de encontrar!
                                 p.lead
                                     a.btn.btn-lg.btn-primary(href="#contact") Entre em Contato
@@ -83,12 +83,44 @@ html(lang="pt-BR")
                                 p Durante os anos em que trabalhei com estas tecnologias acabei por me adaptar com alguns de seus recursos e ferramentas, você pode acompanhar uma lista das principais utilizadas frequêntemente logo abaixo.
                                 each link, resource in resources
                                     a(href=link, title="Veja mais sobre "+resource, target="_blank").btn.btn-sm.btn-primary-outline.m-r-sm.m-b-sm=resource
+                section#certified
+                    h1 #[span Certificados] que conquistei
+                    div.container
+                        div.row
+                            div.col-md-6.col-xs-12
+                                img.pull-left(src="img/zce.jpg", title="Zend Certified Engineer", width="120")
+                                div.pull-left.m-l-sm
+                                    h2 Zend Certified Engineer
+                                    h6 Agosto de 2016 - #[a(href="http://www.zend.com/en/yellow-pages/ZEND029184") ZEND029184]
+                            div.col-md-6.col-xs-12
+                                p "is an industry-wide standard that recognizes PHP expertise and is a measure of distinction that employers use to evaluate prospective employees."
+                                p.pull-right: i: #[a(href="http://www.zend.com/", title="Zend Technologies") Zend Technologies]
                 section#experiense
                     h1 #[span Experiências] que vivenciei
                     div.container
                         div.row
                             div.col-xs-12.col-md-6
                                 h2 Educational
+                                div.history.row
+                                    div.col-xs-12.col-md-6.data
+                                        .date
+                                            h4 <small>Março</small> 2016
+                                            strong -
+                                            h4 Atual
+                                        div.name
+                                            h4 AMF³ <small>Sistemas de Informação</small>
+                                    div.col-xs-12.col-md-6.description.
+                                        Qualifica para o projeto e construção de softwares e serviços computacionais e também para o uso de sistemas computadorizados em outras áreas da atividade humana, a fim de viabilizar ou aumentar a produtividade e a qualidade de todos os tipos de procedimentos.
+                                div.history.row
+                                    div.col-xs-12.col-md-6.data
+                                        .date
+                                            h4 <small>Agosto</small> 2014
+                                            strong -
+                                            h4 <small>Março</small> 2016
+                                        div.name
+                                            h4 UFSM² <small>Sistemas de Informação</small>
+                                    div.col-xs-12.col-md-6.description.
+                                        Qualifica para o projeto e construção de softwares e serviços computacionais e também para o uso de sistemas computadorizados em outras áreas da atividade humana, a fim de viabilizar ou aumentar a produtividade e a qualidade de todos os tipos de procedimentos.
                                 div.history.row
                                     div.col-xs-12.col-md-6.data
                                         div.date
@@ -98,19 +130,29 @@ html(lang="pt-BR")
                                         div.name
                                             h4 IFF¹ <small>Técnico em Informática</small>
                                     div.col-xs-12.col-md-6.description.
-                                        Desenvolve programas de computador, seguindo as especificações e paradigmas da lógica de programação e das linguagens de programação. Utiliza ambientes de desenvolvimento de sistemas, sistemas operacionais e banco de dados.        
+                                        Desenvolve programas de computador, seguindo as especificações e paradigmas da lógica de programação e das linguagens de programação. Utiliza ambientes de desenvolvimento de sistemas, sistemas operacionais e banco de dados.
+                            div.col-xs-12.col-md-6
+                                h2 Professional
                                 div.history.row
                                     div.col-xs-12.col-md-6.data
-                                        .date
-                                            h4 <small>Agosto</small> 2014
+                                        div.date
+                                            h4 <small>Março</small> 2016
                                             strong -
                                             h4 Atual
                                         div.name
-                                            h4 UFSM² <small>Sistemas de Informação</small>
+                                            h4 Grupo Meta IT <small>Programador PHP Pleno</small>
                                     div.col-xs-12.col-md-6.description.
-                                        Qualifica para o projeto e construção de softwares e serviços computacionais e também para o uso de sistemas computadorizados em outras áreas da atividade humana, a fim de viabilizar ou aumentar a produtividade e a qualidade de todos os tipos de procedimentos.
-                            div.col-xs-12.col-md-6
-                                h2 Professional
+                                        Disponibiliza um ambiente e infra-estrutura de versionamento de software, projeta e implanta metodologias de trabalho com software versionado tendo como foco principal a maximização do controle e desempenho do desenvolvimento.
+                                div.history.row
+                                    div.col-xs-12.col-md-6.data
+                                        div.date
+                                            h4 <small>Setembro</small> 2015
+                                            strong -
+                                            h4 <small>Março</small> 2016
+                                        div.name
+                                            h4 UFSM² <small>Gerente de Configuração</small>
+                                    div.col-xs-12.col-md-6.description.
+                                        Disponibiliza um ambiente e infra-estrutura de versionamento de software, projeta e implanta metodologias de trabalho com software versionado tendo como foco principal a maximização do controle e desempenho do desenvolvimento.
                                 div.history.row
                                     div.col-xs-12.col-md-6.data
                                         div.date
@@ -121,18 +163,10 @@ html(lang="pt-BR")
                                             h4 UFSM² <small>Desenvolvedor Web</small>
                                     div.col-xs-12.col-md-6.description.
                                         Desenvolve juntamente a uma equipe, um sistema de gestão e agregação de informações para o hospital universitário de Santa Maria. Onde Médicos e servidores da universidade fazem uso para automação de tarefas que antes eram totalmente manuais.
-                                div.history.row
-                                    div.col-xs-12.col-md-6.data
-                                        div.date
-                                            h4 <small>Setembro</small> 2015
-                                            strong -
-                                            h4 Atual
-                                        div.name
-                                            h4 UFSM² <small>Gerente de Configuração</small>
-                                    div.col-xs-12.col-md-6.description.
-                                        Disponibiliza um ambiente e infra-estrutura de versionamento de software, projeta e implanta metodologias de trabalho com software versionado tendo como foco principal a maximização do controle e desempenho do desenvolvimento.
+                        center.m-t-sm
+                            button(disabled, title="Não há mais histórias").btn.btn-primary-outline#load-more-history Veja Mais
                         footer
-                            small 1: Instituto Federal de Educação, Ciência e Tecnologia Farroupilha. 2: Universidade Federal de Santa Maria.
+                            small 1: Instituto Federal de Educação, Ciência e Tecnologia Farroupilha. 2: Universidade Federal de Santa Maria. 3: Antonio Meneghetti Faculdade
                 section#portfolio
                     h1 #[span Portfolio] com alguns trabalhos
                     div.container
@@ -148,23 +182,13 @@ html(lang="pt-BR")
                                         figcaption
                                             a(href=project.url, target="_blank")
                                             h1=project.name
-                section#blog
-                    h1 #[span blog] com minhas publicações
-                    div.container
-                        div.row
-                            div#blog-post-body
-                                div.col-xs-12.col-md-4
-                                    a.card.card-block
-                                        div.card-block
-                                            h4.card-title
-                                            p.card-text.c
-                                            p.card-text: small.text-muted
                 section#contact
                     h1 #[span Contato] direto comigo
                     div.container
                         div.row
                             div.col-xs-12
-                                p Você também pode me ligar pelo número #[a(href="tel:5581557066", alt="Ligar") (55) 8155-7066], me contatar pelo e-mail #[a(href="mailtocontato@alexrohleder.com.br", alt="Enviar e-mail") contato@alexrohleder.com.br] ou preencher o formulário abaixo.
+                                p.text-center Você pode me ligar pelo número #[a(href="tel:5581557066", alt="Ligar") (55) 8155-7066], me contatar pelo e-mail #[a(href="mailto:contato@alexrohleder.com.br", alt="Enviar e-mail") contato@alexrohleder.com.br] ou preencher o formulário abaixo.
+                                p.text-center Há também a possibilidade de contato via #[a(href="https://www.facebook.com/alexrohleder.com.br") facebook], #[a(href="https://www.linkedin.com/in/alexrohleder") linkedin] ou #[a(href="skype:alexrohleder96@outlook.com") skype].
                                 form.ar-form(autocomplete="off", novalidate)
                                     ol.questions
                                         li.question.current
@@ -183,7 +207,7 @@ html(lang="pt-BR")
                                     div.error &nbsp;
                                     div.count #[span.itr 1] / #[span.total]
                                     h1
-                                p.text-center ©2016 Alex Rohleder
+                                p.text-center ©2016 Alex Rohleder / CNPJ: 26.187.271/0001-91
 
         script(src="https://code.jquery.com/jquery-1.12.0.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js")
