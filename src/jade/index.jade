@@ -17,7 +17,6 @@ html(lang="pt-BR")
 
         script(type="application/ld+json")!=JSON.stringify(jsonld)
         script(src="js/modernizr.min.js")
-        script(src="js/retina.min.js")
 
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:700|Work+Sans:300,400,500,600|Satisfy")
         link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
@@ -40,7 +39,6 @@ html(lang="pt-BR")
                                 li.nav-item: a.nav-link(href="#skills") habilidades
                                 li.nav-item: a.nav-link(href="#experiense") experiência
                                 li.nav-item: a.nav-link(href="#portfolio") portfólio
-                                li.nav-item: a.nav-link(href="#blog") blog
                                 li.nav-item: a.nav-link(href="#contact") contato
                 div.hero
                     div.container
@@ -84,7 +82,7 @@ html(lang="pt-BR")
                                 each link, resource in resources
                                     a(href=link, title="Veja mais sobre "+resource, target="_blank").btn.btn-sm.btn-primary-outline.m-r-sm.m-b-sm=resource
                 section#certified
-                    h1 #[span Certificados] que conquistei
+                    h1 #[span Certificações] que conquistei
                     div.container
                         div.row
                             div.col-md-6.col-xs-12
