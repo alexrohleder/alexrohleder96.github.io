@@ -1,13 +1,14 @@
-
-$primary-color-dark:   #0097A7;
-$primary-color:        #00BCD4;
-$primary-color-light:  #B2EBF2;
-$primary-color-text:   #FFFFFF;
-$primary-text-color:   #212121;
-$secondary-text-color: #727272;
-$divider-color:        #B6B6B6;
-$section-color-light:  #F9F9F9;
-$section-color-dark:   #F1F1F1;
+ 
+$primary-color-dark:       #0097A7;
+$primary-color:            #00BCD4;
+$primary-color-light:      #B2EBF2;
+$primary-color-text:       #FFFFFF;
+$primary-color-text-light: #B2EBF2;
+$primary-text-color:       #212121;
+$secondary-text-color:     #727272;
+$divider-color:            #B6B6B6;
+$section-color-light:      #F9F9F9;
+$section-color-dark:       #F1F1F1;
 
 @import "../../../bower_components/bootstrap/scss/_variables";
 @import "../../../bower_components/bootstrap/scss/_mixins";
@@ -17,7 +18,6 @@ $section-color-dark:   #F1F1F1;
 @import "../../../bower_components/bootstrap/scss/_type";
 @import "../../../bower_components/bootstrap/scss/_grid";
 @import "../../../bower_components/bootstrap/scss/_buttons";
-@import "../../../bower_components/bootstrap/scss/_card";
 @import "../../../bower_components/bootstrap/scss/_animation";
 @import "../../../bower_components/bootstrap/scss/_nav";
 @import "../../../bower_components/bootstrap/scss/_navbar";
@@ -111,10 +111,11 @@ h6, .h6 {
 @import "../section";
 @import "../progress";
 @import "../buttons";
-@import "../cards";
+// @import "../cards";
 @import "../homepage";
 @import "../history";
 @import "../filter";
 @import "../form";
 @import "../animation";
+@import "../callout";
 @import "../utilities";

@@ -15,6 +15,10 @@
     @include button-outline-variant(white);
 }
 
+.btn-secondary-outline:hover {
+	color: $primary-color !important;
+}
+
 .btn-primary-outline,
 .btn-secondary-outline,
 .btn-info-outline,

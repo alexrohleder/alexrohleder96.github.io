@@ -1,16 +1,32 @@
 
-a.card {
-	background-color: #F9F9F9;
-	transition: all 0.3s;
-	margin-bottom: 0;
-	margin-top: 2rem;
-	
-	.card-text {
-		color: $primary-text-color;
+.card {
+	display: block;
+	text-align: center;
+	margin-bottom: 60px;
+
+	.card-icon {
+		padding: 15px;
+		font-size: 30px;
+		background-color: #DDDDDD;
+		width: 60px;
+		border-radius: .25rem;
 	}
 
-	&:hover {
-		border-color: $primary-color;
+	.card-title {
+		margin: 10px 0;
+		font-weight: bold;
+		color: $primary-text-color;
+		text-transform: uppercase;
+	}
+	
+	.card-text {
+		color: $secondary-text-color;
+		text-align: justify;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
 		text-decoration: none;
 	}
 }

@@ -1,0 +1,21 @@
+
+.callout {
+    background-color: $primary-color;
+    padding: 30px;
+
+    p {
+        font-size: 1.5rem;
+        color: $primary-color-text-light;
+        text-align: center;
+        margin: 0;
+
+        span {
+            color: $primary-color-text;
+        }
+
+        .btn {
+            margin-top: -3px;
+            margin-left: 15px;
+        }
+    }
+}
