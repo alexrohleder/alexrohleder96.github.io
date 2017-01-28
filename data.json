@@ -63,6 +63,38 @@
             "name": "sistema"
         }
     ],
+    "services": [
+        {
+            "title": "consultoria e treinamentos",
+            "slug": "consultoria-e-treinamentos",
+            "icon": "book",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisi aliquam augue elementum aliquam."
+        },
+        {
+            "slug": "desenvolvimento-de-portais-e-sites",
+            "title": "desenvolvimento de portais e sites",
+            "icon": "globe",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisi aliquam augue elementum aliquam."
+        },
+        {
+            "slug": "construção-de-aplicações-hibridas",
+            "title": "construção de aplicações híbridas",
+            "icon": "mobile-phone",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisi aliquam augue elementum aliquam."
+        },
+        {
+            "slug": "producao-de-softwares-sob-medida",
+            "title": "produção de softwares sob medida",
+            "icon": "code",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisi aliquam augue elementum aliquam."
+        },
+        {
+            "slug": "venda-de-hospedagens-e-dominios",
+            "title": "venda de hospedagens e domínios",
+            "icon": "server",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisi aliquam augue elementum aliquam."
+        }
+    ],
     "projects": [
         {
             "name"  : "Codeburner",
