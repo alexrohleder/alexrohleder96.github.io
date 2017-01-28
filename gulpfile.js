@@ -15,7 +15,7 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
     return gulp.src('src/js/**/*.js')
                .pipe(concat('main.min.js'))
-               .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
+               .pipe(uglify())
                .pipe(gulp.dest('dist/js'));
 });
 

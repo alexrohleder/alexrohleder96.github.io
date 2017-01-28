@@ -25,6 +25,12 @@ $(function () {
     $.fn.form = function (options) {
 
         /**
+         * Init the e-mail sender api.
+         */
+
+        emailjs.init("user_HcyuU1R7RWlijysqAOvHA");
+
+        /**
          * Getting the event end name implemented in the
          * current browser.
          */
@@ -256,15 +262,10 @@ $(function () {
     form.form({
         submit: function () {
 
-            /**
-             * using an example implementation, fully functional
-             * you only need an api token from https://mandrilapp.com
-             */
-
-            sendEmailWithMandril({
-                name   : $('#contact-name').val(),
-                email  : $('#contact-email').val(),
-                message: $('#contact-message').val()
+            emailjs.send('gmail', 'default', { 
+                name: $('#contact-name').val(),
+                email: $('#contact-email').val(),
+                message: $('#contact-message').val(),
             });
 
             form.velocity('fadeOut', {
@@ -281,28 +282,6 @@ $(function () {
                         .velocity('fadeIn');
                 }
             });
-
-            /**
-             * Don't forget to change the indicated values
-             * the email can be writen directly in html.
-             */
-
-            function sendEmailWithMandril(data) {
-                $.post('https://mandrillapp.com/api/1.0/messages/send.json', {
-                    key: 'XdNGXJqZNO9LtpufjHA1IQ',
-                    message: {
-                        autotext: 'true',
-                        subject: data.name + ' got in touch via portfolio',
-                        from_email: data.email,
-                        html: '<p>' + data.name + ' <b>' + data.email + '</b></p><p>' + data.message + '</p>',
-                        to: [{
-                            email: 'alexrohleder96@outlook.com',
-                            name : 'Alex Rohleder',
-                            type : 'to'
-                        }]
-                    }
-                })
-            }
 
         }
     });
