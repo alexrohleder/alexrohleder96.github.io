@@ -123,7 +123,7 @@
         {
             "name"  : "Bella Forma",
             "slug"  : "bella-forma",
-            "url"   : "https://www.bellaformasm.com.br",
+            "url"   : "http://bella-forma.herokuapp.com",
             "tag"   : "web",
             "desc"  : "Em breve...",
             "tools" : "PHP, Slim, Eloquent, Twig, SQLite, jQuery, Bootstrap, SASS, Grunt"
